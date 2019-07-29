@@ -22,4 +22,9 @@ public class ProductRepository implements GeneralRepository<Product>{
     public List<Product> findAll() {
         return productList;
     }
+
+    @Override
+    public void addProduct(Product product) {
+        productList.add(product);
+    }
 }

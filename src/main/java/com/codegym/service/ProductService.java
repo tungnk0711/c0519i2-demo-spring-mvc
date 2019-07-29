@@ -15,4 +15,9 @@ public class ProductService implements GeneralService<Product>{
     public List<Product> findAll() {
         return productRepository.findAll();
     }
+
+    @Override
+    public void addProduct(Product product) {
+        productRepository.addProduct(product);
+    }
 }
