@@ -6,10 +6,12 @@
 </head>
 <body>
 
-<ul th:each="product : ${products}">
-    <li th:text="${product.id}"></li>
-    <li th:text="${product.name}"></li>
-</ul>
+<div th:each="product : ${products}">
+    <p th:text="${product.id}"></p>
+    <p th:text="${product.name}"></p>
+    <img width="150px" height="200px" th:src="@{'/image/' + ${product.image}}">
+    <p><a th:href="@{/product/detail/__${product.id}__}">Detail</a></p>
+</div>
 
 </body>
 </html>

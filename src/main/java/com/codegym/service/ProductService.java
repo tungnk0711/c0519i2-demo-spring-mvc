@@ -20,4 +20,9 @@ public class ProductService implements GeneralService<Product>{
     public void addProduct(Product product) {
         productRepository.addProduct(product);
     }
+
+    @Override
+    public Product findById(Long id) {
+        return productRepository.findById(id);
+    }
 }
